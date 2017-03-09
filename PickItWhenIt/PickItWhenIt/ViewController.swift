@@ -21,13 +21,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     let token:String = "9e304161-bb97-4210-b13d-c71eaf58961c"
     let coverage:String = "fr-idf"
     
+    @IBOutlet weak var tableView: UITableView!
     let cellIdentifier = "StopPointCellIdentifier"
     
     var stopSchedules:[String] = ["TATA", "TOTO", "TUTU"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        StopSchedulesBuilder(token: self.token, coverage: self.coverage)
+                .withDistance(1000)
+                .withCount(30)
+                .build(callback: {
+                    (stopSchedules:[String]) -> Void in
+                    self.stopSchedules = stopSchedules
+
+                    self.tableView.reloadData()
+                })
     }
 
     override func didReceiveMemoryWarning() {
