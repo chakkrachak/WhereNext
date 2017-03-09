@@ -45,12 +45,9 @@ public class StopSchedulesBuilder : BaseNavitiaResourceBuilder {
                 do{
                     let json:[String:AnyObject] = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String:AnyObject]
 
-                    let jsonStopSchedules:[[String: AnyObject]] = json["stop_schedules"] as! [[String: AnyObject]]
-                    for stopSchedule in jsonStopSchedules {
-                        let currentStopSchedule:String? = self.parseJsonResponse(stopSchedule)
-                        if currentStopSchedule != nil {
-                            self.stopSchedules.append(currentStopSchedule!)
-                        }
+                    let stopSchedulesObject = RootType(json:json)
+                    for stopSchedule in stopSchedulesObject!.stopSchedules {
+                        self.stopSchedules.append(stopSchedule.stopPoint.label)
                     }
                 } catch {
                     print("Error with Json: \(error)")
@@ -65,18 +62,5 @@ public class StopSchedulesBuilder : BaseNavitiaResourceBuilder {
         }
         
         task.resume()
-    }
-    
-    func parseJsonResponse(_ stopSchedulesJsonResponse:[String:AnyObject]) -> String? {
-        let stopPoint = stopSchedulesJsonResponse["stop_point"] as! [String: AnyObject]
-        let dateTimes = stopSchedulesJsonResponse["date_times"] as! [[String: AnyObject]]
-        // let displayInformations = stopSchedulesJsonResponse["display_informations"] as! [String: AnyObject]
-        
-        var resultStopSchedule:String? = nil
-        if dateTimes.count > 0 {
-            resultStopSchedule = stopPoint["label"] as! String
-        }
-        
-        return resultStopSchedule
     }
 }
