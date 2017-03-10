@@ -23,6 +23,6 @@ class ImportGeneratorTest: XCTestCase {
     func testShouldGenerateImportHeader() {
         let importGenerator:ImportGenerator = ImportGenerator()
         
-        XCTAssertTrue(importGenerator.generateCode() == "import Foundation\nimport Marshal\n")
+        Assert.that(importGenerator.generateCode()).isEqualTo("import Foundation\nimport Marshal\n")
     }
 }

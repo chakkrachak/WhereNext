@@ -23,6 +23,6 @@ class StructDescriptorTest: XCTestCase {
     func testShouldInstantiateWithName() {
         let structDescriptor:StructDescriptor = StructDescriptor("StructName")
 
-        XCTAssert(structDescriptor.name == "StructName")
+        Assert.that(structDescriptor.name).isEqualTo("StructName")
     }
 }
