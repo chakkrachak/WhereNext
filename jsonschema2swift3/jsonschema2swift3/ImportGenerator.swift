@@ -9,7 +9,14 @@
 import Foundation
 
 class ImportGenerator {
+    var imports:[String] = []
+
+    init() {
+        imports.append("Foundation")
+        imports.append("Marshal")
+    }
+
     func generateCode() -> String {
-        return "import Foundation\n"
+        return imports.map({"import \($0)\n"}).reduce("", +)
     }
 }

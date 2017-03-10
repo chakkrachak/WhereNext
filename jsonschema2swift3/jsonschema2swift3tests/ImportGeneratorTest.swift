@@ -20,9 +20,9 @@ class ImportGeneratorTest: XCTestCase {
         super.tearDown()
     }
 
-    func testExample() {
+    func testShouldGenerateImportHeader() {
         let importGenerator:ImportGenerator = ImportGenerator()
         
-        XCTAssertTrue(importGenerator.generateCode() == "import Foundation\n")
+        XCTAssertTrue(importGenerator.generateCode() == "import Foundation\nimport Marshal\n")
     }
 }
