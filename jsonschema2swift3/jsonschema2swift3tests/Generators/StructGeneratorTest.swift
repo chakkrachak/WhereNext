@@ -27,9 +27,6 @@ class StructGeneratorTest: XCTestCase {
         let actualValue:String = structGenerator.generateCodeFrom(structDescriptor)
         let expectedValue:String = "import Foundation\nimport Marshal\n\nstruct StructName {\n}"
 
-        XCTAssert(
-            actualValue == expectedValue,
-            "Actual :\n\(actualValue)\n#########\nExpected :\n\(expectedValue)\n#########"
-        )
+        Assert.that(actualValue).isEqualTo(expectedValue)
     }
 }
