@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A1AA332F7F98EE563DC3E0B /* StructDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA6F8A798662E2D604E0D /* StructDescriptor.swift */; };
+		5A1AA36E0610F608C6A6A9F3 /* StructDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA6F8A798662E2D604E0D /* StructDescriptor.swift */; };
+		5A1AA48DEE0A495B962649FE /* StructGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AAC767A32DD68B018F021 /* StructGenerator.swift */; };
+		5A1AAA16EB4BAC455817B2C4 /* StructGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AAC767A32DD68B018F021 /* StructGenerator.swift */; };
+		5A1AAA5007845782717C64DE /* ImportGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AAB30801F87F6C9663A42 /* ImportGenerator.swift */; };
+		5A1AAA76C33CA8D4CB0A1717 /* ImportGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AAB30801F87F6C9663A42 /* ImportGenerator.swift */; };
+		5A1AAB93AEC3001AD2414DB0 /* StructGeneratorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AAC3A772BF447447777C8 /* StructGeneratorTest.swift */; };
 		5A1AABF13C55C22F3FCA9812 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA6DF248D7500944FA816 /* main.swift */; };
-		FE525FB61E730480008CBE2B /* ImportGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE525FB51E730480008CBE2B /* ImportGenerator.swift */; };
-		FE525FBA1E7304DE008CBE2B /* ImportGeneratorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE525FB91E7304DE008CBE2B /* ImportGeneratorTest.swift */; };
-		FE525FBB1E7305B0008CBE2B /* ImportGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE525FB51E730480008CBE2B /* ImportGenerator.swift */; };
+		5A1AACC68B9AA0966361C12D /* StructDescriptorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AAC3BE34736963F52EE6B /* StructDescriptorTest.swift */; };
+		5A1AAE805B4A5786A9F2E666 /* ImportGeneratorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA565C2627BFD9D508A7A /* ImportGeneratorTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,12 +32,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5A1AA565C2627BFD9D508A7A /* ImportGeneratorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportGeneratorTest.swift; sourceTree = "<group>"; };
 		5A1AA6DF248D7500944FA816 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		5A1AA6F8A798662E2D604E0D /* StructDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StructDescriptor.swift; sourceTree = "<group>"; };
+		5A1AAB30801F87F6C9663A42 /* ImportGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportGenerator.swift; sourceTree = "<group>"; };
+		5A1AAC3A772BF447447777C8 /* StructGeneratorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StructGeneratorTest.swift; sourceTree = "<group>"; };
+		5A1AAC3BE34736963F52EE6B /* StructDescriptorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StructDescriptorTest.swift; sourceTree = "<group>"; };
+		5A1AAC767A32DD68B018F021 /* StructGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StructGenerator.swift; sourceTree = "<group>"; };
 		5A1AAE5E8417364003295D68 /* jsonschema2swift3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = jsonschema2swift3; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE525FAB1E730035008CBE2B /* jsonschema2swift3tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jsonschema2swift3tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE525FAF1E730035008CBE2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FE525FB51E730480008CBE2B /* ImportGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportGenerator.swift; sourceTree = "<group>"; };
-		FE525FB91E7304DE008CBE2B /* ImportGeneratorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportGeneratorTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +62,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A1AA0ADE1CACFC681EA1869 /* Descriptors */ = {
+			isa = PBXGroup;
+			children = (
+				5A1AAC3BE34736963F52EE6B /* StructDescriptorTest.swift */,
+			);
+			path = Descriptors;
+			sourceTree = "<group>";
+		};
 		5A1AA21C1C5D522E3F4399B4 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +77,24 @@
 				5A1AA4DE3F4F8ECBE6E806F5 /* Products */,
 				5A1AA90E6BDF238563FF0465 /* jsonschema2swift3 */,
 			);
+			sourceTree = "<group>";
+		};
+		5A1AA29A79B1D4AF8B84B669 /* Generators */ = {
+			isa = PBXGroup;
+			children = (
+				5A1AAB30801F87F6C9663A42 /* ImportGenerator.swift */,
+				5A1AAC767A32DD68B018F021 /* StructGenerator.swift */,
+			);
+			path = Generators;
+			sourceTree = "<group>";
+		};
+		5A1AA419D6D52C8BEE6ED58C /* Generators */ = {
+			isa = PBXGroup;
+			children = (
+				5A1AA565C2627BFD9D508A7A /* ImportGeneratorTest.swift */,
+				5A1AAC3A772BF447447777C8 /* StructGeneratorTest.swift */,
+			);
+			path = Generators;
 			sourceTree = "<group>";
 		};
 		5A1AA4DE3F4F8ECBE6E806F5 /* Products */ = {
@@ -73,35 +109,29 @@
 		5A1AA90E6BDF238563FF0465 /* jsonschema2swift3 */ = {
 			isa = PBXGroup;
 			children = (
-				FE525FB31E7301F5008CBE2B /* Generators */,
 				5A1AA6DF248D7500944FA816 /* main.swift */,
+				5A1AAA16962825CA00AA7DBC /* Descriptors */,
+				5A1AA29A79B1D4AF8B84B669 /* Generators */,
 			);
 			path = jsonschema2swift3;
+			sourceTree = "<group>";
+		};
+		5A1AAA16962825CA00AA7DBC /* Descriptors */ = {
+			isa = PBXGroup;
+			children = (
+				5A1AA6F8A798662E2D604E0D /* StructDescriptor.swift */,
+			);
+			path = Descriptors;
 			sourceTree = "<group>";
 		};
 		FE525FAC1E730035008CBE2B /* jsonschema2swift3tests */ = {
 			isa = PBXGroup;
 			children = (
-				FE525FB41E73020E008CBE2B /* Generators */,
 				FE525FAF1E730035008CBE2B /* Info.plist */,
+				5A1AA0ADE1CACFC681EA1869 /* Descriptors */,
+				5A1AA419D6D52C8BEE6ED58C /* Generators */,
 			);
 			path = jsonschema2swift3tests;
-			sourceTree = "<group>";
-		};
-		FE525FB31E7301F5008CBE2B /* Generators */ = {
-			isa = PBXGroup;
-			children = (
-				FE525FB51E730480008CBE2B /* ImportGenerator.swift */,
-			);
-			name = Generators;
-			sourceTree = "<group>";
-		};
-		FE525FB41E73020E008CBE2B /* Generators */ = {
-			isa = PBXGroup;
-			children = (
-				FE525FB91E7304DE008CBE2B /* ImportGeneratorTest.swift */,
-			);
-			name = Generators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,8 +220,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE525FB61E730480008CBE2B /* ImportGenerator.swift in Sources */,
 				5A1AABF13C55C22F3FCA9812 /* main.swift in Sources */,
+				5A1AA332F7F98EE563DC3E0B /* StructDescriptor.swift in Sources */,
+				5A1AAA76C33CA8D4CB0A1717 /* ImportGenerator.swift in Sources */,
+				5A1AA48DEE0A495B962649FE /* StructGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,8 +231,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE525FBA1E7304DE008CBE2B /* ImportGeneratorTest.swift in Sources */,
-				FE525FBB1E7305B0008CBE2B /* ImportGenerator.swift in Sources */,
+				5A1AA36E0610F608C6A6A9F3 /* StructDescriptor.swift in Sources */,
+				5A1AAE805B4A5786A9F2E666 /* ImportGeneratorTest.swift in Sources */,
+				5A1AAA5007845782717C64DE /* ImportGenerator.swift in Sources */,
+				5A1AACC68B9AA0966361C12D /* StructDescriptorTest.swift in Sources */,
+				5A1AAA16EB4BAC455817B2C4 /* StructGenerator.swift in Sources */,
+				5A1AAB93AEC3001AD2414DB0 /* StructGeneratorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
