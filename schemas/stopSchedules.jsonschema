@@ -1,0 +1,1022 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "stop_schedules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "stop_point": {
+            "type": "object",
+            "properties": {
+              "codes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "value"
+                  ]
+                }
+              },
+              "name": {
+                "type": "string"
+              },
+              "links": {
+                "type": "array",
+                "items": {}
+              },
+              "physical_modes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              },
+              "coord": {
+                "type": "object",
+                "properties": {
+                  "lat": {
+                    "type": "string"
+                  },
+                  "lon": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "lat",
+                  "lon"
+                ]
+              },
+              "label": {
+                "type": "string"
+              },
+              "equipments": {
+                "type": "array",
+                "items": {}
+              },
+              "commercial_modes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "id"
+                  ]
+                }
+              },
+              "administrative_regions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "insee": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "level": {
+                      "type": "integer"
+                    },
+                    "coord": {
+                      "type": "object",
+                      "properties": {
+                        "lat": {
+                          "type": "string"
+                        },
+                        "lon": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "lat",
+                        "lon"
+                      ]
+                    },
+                    "label": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "string"
+                    },
+                    "zip_code": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "insee",
+                    "name",
+                    "level",
+                    "coord",
+                    "label",
+                    "id",
+                    "zip_code"
+                  ]
+                }
+              },
+              "id": {
+                "type": "string"
+              },
+              "stop_area": {
+                "type": "object",
+                "properties": {
+                  "codes": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "type",
+                        "value"
+                      ]
+                    }
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "links": {
+                    "type": "array",
+                    "items": {}
+                  },
+                  "coord": {
+                    "type": "object",
+                    "properties": {
+                      "lat": {
+                        "type": "string"
+                      },
+                      "lon": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "lat",
+                      "lon"
+                    ]
+                  },
+                  "label": {
+                    "type": "string"
+                  },
+                  "administrative_regions": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "insee": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "level": {
+                          "type": "integer"
+                        },
+                        "coord": {
+                          "type": "object",
+                          "properties": {
+                            "lat": {
+                              "type": "string"
+                            },
+                            "lon": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "lat",
+                            "lon"
+                          ]
+                        },
+                        "label": {
+                          "type": "string"
+                        },
+                        "id": {
+                          "type": "string"
+                        },
+                        "zip_code": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "insee",
+                        "name",
+                        "level",
+                        "coord",
+                        "label",
+                        "id",
+                        "zip_code"
+                      ]
+                    }
+                  },
+                  "timezone": {
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "codes",
+                  "name",
+                  "links",
+                  "coord",
+                  "label",
+                  "administrative_regions",
+                  "timezone",
+                  "id"
+                ]
+              }
+            },
+            "required": [
+              "codes",
+              "name",
+              "links",
+              "physical_modes",
+              "coord",
+              "label",
+              "equipments",
+              "commercial_modes",
+              "administrative_regions",
+              "id",
+              "stop_area"
+            ]
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "id": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "type",
+                "id"
+              ]
+            }
+          },
+          "date_times": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "date_time": {
+                  "type": "string"
+                },
+                "additional_informations": {
+                  "type": "array",
+                  "items": {}
+                },
+                "links": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string"
+                      },
+                      "value": {
+                        "type": "string"
+                      },
+                      "rel": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "type",
+                      "value",
+                      "rel",
+                      "id"
+                    ]
+                  }
+                },
+                "data_freshness": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "date_time",
+                "additional_informations",
+                "links",
+                "data_freshness"
+              ]
+            }
+          },
+          "route": {
+            "type": "object",
+            "properties": {
+              "direction": {
+                "type": "object",
+                "properties": {
+                  "embedded_type": {
+                    "type": "string"
+                  },
+                  "quality": {
+                    "type": "integer"
+                  },
+                  "stop_area": {
+                    "type": "object",
+                    "properties": {
+                      "codes": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "value": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "type",
+                            "value"
+                          ]
+                        }
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "links": {
+                        "type": "array",
+                        "items": {}
+                      },
+                      "coord": {
+                        "type": "object",
+                        "properties": {
+                          "lat": {
+                            "type": "string"
+                          },
+                          "lon": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "lat",
+                          "lon"
+                        ]
+                      },
+                      "label": {
+                        "type": "string"
+                      },
+                      "administrative_regions": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "insee": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "level": {
+                              "type": "integer"
+                            },
+                            "coord": {
+                              "type": "object",
+                              "properties": {
+                                "lat": {
+                                  "type": "string"
+                                },
+                                "lon": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "lat",
+                                "lon"
+                              ]
+                            },
+                            "label": {
+                              "type": "string"
+                            },
+                            "id": {
+                              "type": "string"
+                            },
+                            "zip_code": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "insee",
+                            "name",
+                            "level",
+                            "coord",
+                            "label",
+                            "id",
+                            "zip_code"
+                          ]
+                        }
+                      },
+                      "timezone": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "codes",
+                      "name",
+                      "links",
+                      "coord",
+                      "label",
+                      "administrative_regions",
+                      "timezone",
+                      "id"
+                    ]
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "embedded_type",
+                  "quality",
+                  "stop_area",
+                  "name",
+                  "id"
+                ]
+              },
+              "codes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "value"
+                  ]
+                }
+              },
+              "name": {
+                "type": "string"
+              },
+              "links": {
+                "type": "array",
+                "items": {}
+              },
+              "is_frequence": {
+                "type": "string"
+              },
+              "geojson": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "coordinates": {
+                    "type": "array",
+                    "items": {}
+                  }
+                },
+                "required": [
+                  "type",
+                  "coordinates"
+                ]
+              },
+              "direction_type": {
+                "type": "string"
+              },
+              "line": {
+                "type": "object",
+                "properties": {
+                  "code": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "links": {
+                    "type": "array",
+                    "items": {}
+                  },
+                  "physical_modes": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "id"
+                      ]
+                    }
+                  },
+                  "opening_time": {
+                    "type": "string"
+                  },
+                  "geojson": {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string"
+                      },
+                      "coordinates": {
+                        "type": "array",
+                        "items": {}
+                      }
+                    },
+                    "required": [
+                      "type",
+                      "coordinates"
+                    ]
+                  },
+                  "text_color": {
+                    "type": "string"
+                  },
+                  "color": {
+                    "type": "string"
+                  },
+                  "codes": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "type",
+                        "value"
+                      ]
+                    }
+                  },
+                  "closing_time": {
+                    "type": "string"
+                  },
+                  "routes": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "direction": {
+                          "type": "object",
+                          "properties": {
+                            "embedded_type": {
+                              "type": "string"
+                            },
+                            "quality": {
+                              "type": "integer"
+                            },
+                            "stop_area": {
+                              "type": "object",
+                              "properties": {
+                                "codes": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "type": {
+                                        "type": "string"
+                                      },
+                                      "value": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "type",
+                                      "value"
+                                    ]
+                                  }
+                                },
+                                "name": {
+                                  "type": "string"
+                                },
+                                "links": {
+                                  "type": "array",
+                                  "items": {}
+                                },
+                                "coord": {
+                                  "type": "object",
+                                  "properties": {
+                                    "lat": {
+                                      "type": "string"
+                                    },
+                                    "lon": {
+                                      "type": "string"
+                                    }
+                                  },
+                                  "required": [
+                                    "lat",
+                                    "lon"
+                                  ]
+                                },
+                                "label": {
+                                  "type": "string"
+                                },
+                                "timezone": {
+                                  "type": "string"
+                                },
+                                "id": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "codes",
+                                "name",
+                                "links",
+                                "coord",
+                                "label",
+                                "timezone",
+                                "id"
+                              ]
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "id": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "embedded_type",
+                            "quality",
+                            "stop_area",
+                            "name",
+                            "id"
+                          ]
+                        },
+                        "codes": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "type": {
+                                "type": "string"
+                              },
+                              "value": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "type",
+                              "value"
+                            ]
+                          }
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "links": {
+                          "type": "array",
+                          "items": {}
+                        },
+                        "is_frequence": {
+                          "type": "string"
+                        },
+                        "geojson": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "coordinates": {
+                              "type": "array",
+                              "items": {}
+                            }
+                          },
+                          "required": [
+                            "type",
+                            "coordinates"
+                          ]
+                        },
+                        "direction_type": {
+                          "type": "string"
+                        },
+                        "id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "direction",
+                        "codes",
+                        "name",
+                        "links",
+                        "is_frequence",
+                        "geojson",
+                        "direction_type",
+                        "id"
+                      ]
+                    }
+                  },
+                  "commercial_mode": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "id"
+                    ]
+                  },
+                  "id": {
+                    "type": "string"
+                  },
+                  "network": {
+                    "type": "object",
+                    "properties": {
+                      "codes": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string"
+                            },
+                            "value": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "type",
+                            "value"
+                          ]
+                        }
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "links": {
+                        "type": "array",
+                        "items": {}
+                      },
+                      "id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "codes",
+                      "name",
+                      "links",
+                      "id"
+                    ]
+                  }
+                },
+                "required": [
+                  "code",
+                  "name",
+                  "links",
+                  "physical_modes",
+                  "opening_time",
+                  "geojson",
+                  "text_color",
+                  "color",
+                  "codes",
+                  "closing_time",
+                  "routes",
+                  "commercial_mode",
+                  "id",
+                  "network"
+                ]
+              },
+              "id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "direction",
+              "codes",
+              "name",
+              "links",
+              "is_frequence",
+              "geojson",
+              "direction_type",
+              "line",
+              "id"
+            ]
+          },
+          "additional_informations": {
+            "type": "null"
+          },
+          "display_informations": {
+            "type": "object",
+            "properties": {
+              "direction": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "network": {
+                "type": "string"
+              },
+              "links": {
+                "type": "array",
+                "items": {}
+              },
+              "color": {
+                "type": "string"
+              },
+              "commercial_mode": {
+                "type": "string"
+              },
+              "text_color": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "direction",
+              "code",
+              "network",
+              "links",
+              "color",
+              "commercial_mode",
+              "text_color",
+              "label"
+            ]
+          }
+        },
+        "required": [
+          "stop_point",
+          "links",
+          "date_times",
+          "route",
+          "additional_informations",
+          "display_informations"
+        ]
+      }
+    },
+    "pagination": {
+      "type": "object",
+      "properties": {
+        "start_page": {
+          "type": "integer"
+        },
+        "items_on_page": {
+          "type": "integer"
+        },
+        "items_per_page": {
+          "type": "integer"
+        },
+        "total_result": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "start_page",
+        "items_on_page",
+        "items_per_page",
+        "total_result"
+      ]
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "href": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "templated": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "href",
+          "type",
+          "templated"
+        ]
+      }
+    },
+    "disruptions": {
+      "type": "array",
+      "items": {}
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "type",
+          "id",
+          "value"
+        ]
+      }
+    },
+    "feed_publishers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "license": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "url",
+          "id",
+          "license",
+          "name"
+        ]
+      }
+    },
+    "exceptions": {
+      "type": "array",
+      "items": {}
+    }
+  },
+  "required": [
+    "stop_schedules",
+    "pagination",
+    "links",
+    "disruptions",
+    "notes",
+    "feed_publishers",
+    "exceptions"
+  ]
+}
