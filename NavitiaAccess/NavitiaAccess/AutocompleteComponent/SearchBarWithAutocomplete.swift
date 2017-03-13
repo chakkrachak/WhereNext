@@ -8,8 +8,6 @@
 
 import Foundation
 
-public class SearchBarWithAutocomplete {
-    public var label:String="TOTO"
-    
+public class SearchBarWithAutocomplete {    
     public init() {}
 }
