@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NavitiaAccess
 
 class StopPointViewCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
@@ -55,8 +56,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath as IndexPath) as! StopPointViewCell
-        
-        cell.updateWith(label:stopSchedules[indexPath.row])
+        let searchBarWithAutocomplete:SearchBarWithAutocomplete = SearchBarWithAutocomplete()
+        cell.updateWith(label:searchBarWithAutocomplete.label+" "+stopSchedules[indexPath.row])
         
         return cell
     }
