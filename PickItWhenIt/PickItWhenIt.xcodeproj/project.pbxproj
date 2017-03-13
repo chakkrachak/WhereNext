@@ -7,11 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A1AA8CA32AE6E8A3185CC2C /* BaseNavitiaResourceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA0272430F861153E32C9 /* BaseNavitiaResourceBuilder.swift */; };
-		5A1AAC622C6573E1365EE10D /* StopSchedulesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA6F5E82A11C330DE4C9D /* StopSchedulesBuilder.swift */; };
 		FE4CEEEB1E76D57900B99CBC /* NavitiaAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4CEEEA1E76D55D00B99CBC /* NavitiaAccess.framework */; };
 		FE4CEEEC1E76D57900B99CBC /* NavitiaAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE4CEEEA1E76D55D00B99CBC /* NavitiaAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FE6757E21E718DA600779BD0 /* stopSchedules.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6757E11E718DA600779BD0 /* stopSchedules.swift */; };
 		FEE3DDD21E71646C00B278F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE3DDD11E71646C00B278F4 /* AppDelegate.swift */; };
 		FEE3DDD41E71646C00B278F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE3DDD31E71646C00B278F4 /* ViewController.swift */; };
 		FEE3DDD71E71646C00B278F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE3DDD51E71646C00B278F4 /* Main.storyboard */; };
@@ -51,10 +48,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5A1AA0272430F861153E32C9 /* BaseNavitiaResourceBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavitiaResourceBuilder.swift; sourceTree = "<group>"; };
-		5A1AA6F5E82A11C330DE4C9D /* StopSchedulesBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopSchedulesBuilder.swift; sourceTree = "<group>"; };
 		FE4CEEE51E76D55C00B99CBC /* NavitiaAccess.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NavitiaAccess.xcodeproj; path = ../NavitiaAccess/NavitiaAccess.xcodeproj; sourceTree = "<group>"; };
-		FE6757E11E718DA600779BD0 /* stopSchedules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = stopSchedules.swift; sourceTree = "<group>"; };
 		FEE3DDCE1E71646C00B278F4 /* PickItWhenIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickItWhenIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE3DDD11E71646C00B278F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEE3DDD31E71646C00B278F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,39 +70,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FE3E35C11E71872100A916D6 /* Generated */ = {
-			isa = PBXGroup;
-			children = (
-				FE3E35C21E71873000A916D6 /* Models */,
-			);
-			name = Generated;
-			sourceTree = "<group>";
-		};
-		FE3E35C21E71873000A916D6 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				FE6757E11E718DA600779BD0 /* stopSchedules.swift */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		FE3E35C31E71873A00A916D6 /* NavitiaSDK */ = {
-			isa = PBXGroup;
-			children = (
-				FE3E35C41E71874B00A916D6 /* Resources */,
-			);
-			name = NavitiaSDK;
-			sourceTree = "<group>";
-		};
-		FE3E35C41E71874B00A916D6 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				5A1AA0272430F861153E32C9 /* BaseNavitiaResourceBuilder.swift */,
-				5A1AA6F5E82A11C330DE4C9D /* StopSchedulesBuilder.swift */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		FE4CEEE61E76D55C00B99CBC /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,8 +98,6 @@
 		FEE3DDD01E71646C00B278F4 /* PickItWhenIt */ = {
 			isa = PBXGroup;
 			children = (
-				FE3E35C31E71873A00A916D6 /* NavitiaSDK */,
-				FE3E35C11E71872100A916D6 /* Generated */,
 				FEE3DDD11E71646C00B278F4 /* AppDelegate.swift */,
 				FEE3DDD31E71646C00B278F4 /* ViewController.swift */,
 				FEE3DDD51E71646C00B278F4 /* Main.storyboard */,
@@ -241,10 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEE3DDD41E71646C00B278F4 /* ViewController.swift in Sources */,
-				FE6757E21E718DA600779BD0 /* stopSchedules.swift in Sources */,
 				FEE3DDD21E71646C00B278F4 /* AppDelegate.swift in Sources */,
-				5A1AA8CA32AE6E8A3185CC2C /* BaseNavitiaResourceBuilder.swift in Sources */,
-				5A1AAC622C6573E1365EE10D /* StopSchedulesBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

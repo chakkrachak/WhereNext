@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		FE4CEEDF1E76D4E000B99CBC /* NavitiaAccess.h in Headers */ = {isa = PBXBuildFile; fileRef = FE4CEEDD1E76D4E000B99CBC /* NavitiaAccess.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE4CEEF41E76D8A600B99CBC /* SearchBarWithAutocomplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CEEF31E76D8A600B99CBC /* SearchBarWithAutocomplete.swift */; };
+		FED48DD21E7706B60066EF44 /* allModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED48DCE1E7706B60066EF44 /* allModels.swift */; };
+		FED48DD31E7706B60066EF44 /* BaseNavitiaResourceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED48DD01E7706B60066EF44 /* BaseNavitiaResourceBuilder.swift */; };
+		FED48DD41E7706B60066EF44 /* StopSchedulesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED48DD11E7706B60066EF44 /* StopSchedulesBuilder.swift */; };
+		FED48DD61E7709840066EF44 /* AutocompleteBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED48DD51E7709840066EF44 /* AutocompleteBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +20,10 @@
 		FE4CEEDD1E76D4E000B99CBC /* NavitiaAccess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavitiaAccess.h; sourceTree = "<group>"; };
 		FE4CEEDE1E76D4E000B99CBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE4CEEF31E76D8A600B99CBC /* SearchBarWithAutocomplete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarWithAutocomplete.swift; sourceTree = "<group>"; };
+		FED48DCE1E7706B60066EF44 /* allModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = allModels.swift; sourceTree = "<group>"; };
+		FED48DD01E7706B60066EF44 /* BaseNavitiaResourceBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavitiaResourceBuilder.swift; sourceTree = "<group>"; };
+		FED48DD11E7706B60066EF44 /* StopSchedulesBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopSchedulesBuilder.swift; sourceTree = "<group>"; };
+		FED48DD51E7709840066EF44 /* AutocompleteBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutocompleteBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +40,7 @@
 		FE4CEED01E76D4E000B99CBC = {
 			isa = PBXGroup;
 			children = (
+				FED48DCB1E7706B60066EF44 /* NavitiaExpert */,
 				FE4CEEDC1E76D4E000B99CBC /* NavitiaAccess */,
 				FE4CEEDB1E76D4E000B99CBC /* Products */,
 			);
@@ -61,6 +70,41 @@
 				FE4CEEF31E76D8A600B99CBC /* SearchBarWithAutocomplete.swift */,
 			);
 			path = AutocompleteComponent;
+			sourceTree = "<group>";
+		};
+		FED48DCB1E7706B60066EF44 /* NavitiaExpert */ = {
+			isa = PBXGroup;
+			children = (
+				FED48DCC1E7706B60066EF44 /* Models */,
+				FED48DCF1E7706B60066EF44 /* Resources */,
+			);
+			path = NavitiaExpert;
+			sourceTree = "<group>";
+		};
+		FED48DCC1E7706B60066EF44 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FED48DCD1E7706B60066EF44 /* Generated */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FED48DCD1E7706B60066EF44 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				FED48DCE1E7706B60066EF44 /* allModels.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		FED48DCF1E7706B60066EF44 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FED48DD01E7706B60066EF44 /* BaseNavitiaResourceBuilder.swift */,
+				FED48DD11E7706B60066EF44 /* StopSchedulesBuilder.swift */,
+				FED48DD51E7709840066EF44 /* AutocompleteBuilder.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +188,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FED48DD61E7709840066EF44 /* AutocompleteBuilder.swift in Sources */,
+				FED48DD31E7706B60066EF44 /* BaseNavitiaResourceBuilder.swift in Sources */,
+				FED48DD21E7706B60066EF44 /* allModels.swift in Sources */,
+				FED48DD41E7706B60066EF44 /* StopSchedulesBuilder.swift in Sources */,
 				FE4CEEF41E76D8A600B99CBC /* SearchBarWithAutocomplete.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

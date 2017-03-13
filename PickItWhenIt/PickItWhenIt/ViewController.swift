@@ -48,9 +48,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func filterContentForSearchText(searchText: String, scope: String = "All") {
-        self.autocompleteResults = ["HOP", "LA"]
-        
-        self.tableView.reloadData()
+        AutocompleteBuilder(token: self.token, coverage: self.coverage)
+                .withDistance(1000)
+                .withCount(30)
+                .build(callback: {
+                    (autocompleteResults:[String]) -> Void in
+                    self.autocompleteResults = autocompleteResults
+
+                    self.tableView.reloadData()
+                })
     }
     
     override func viewDidLoad() {
