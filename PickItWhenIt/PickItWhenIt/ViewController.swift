@@ -42,41 +42,37 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     var stopSchedules:[StopSchedulesResponse.StopSchedules] = []
     var autocompleteResults:[AutoCompleteResponse.Places] = []
-
-    func loadDataInTable() {
+    
+    func loadDataInTable(lon:String, lat:String) {
         StopSchedulesBuilder(token: self.token, coverage: self.coverage)
             .withDistance(1000)
             .withCount(30)
-            .build(callback: {
+            .build(lon: lon, lat: lat, callback: {
                 (stopSchedules:[StopSchedulesResponse.StopSchedules]) -> Void in
                 self.stopSchedules = stopSchedules
-
                 self.tableView.reloadData()
+                self.searchController.isActive = false
             })
     }
 
     func filterContentForSearchText(searchText: String, scope: String = "All") {
         if (searchText != "") {
             AutocompleteBuilder(token: self.token, coverage: self.coverage)
-                    .withDistance(1000)
+                    .withDistance(300)
                     .withCount(30)
                     .build(query: searchText, callback: {
                         (autocompleteResults: [AutoCompleteResponse.Places]) -> Void in
                         self.autocompleteResults = autocompleteResults
-
                         self.tableView.reloadData()
                     })
         } else {
             self.autocompleteResults = []
-
             self.tableView.reloadData()
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // loadDataInTable()
 
         self.searchController.searchResultsUpdater = self
         self.searchController.dimsBackgroundDuringPresentation = false
@@ -119,7 +115,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if isInAutocompletion() {
-            print(autocompleteResults[indexPath.row].name)
+            let currentAutocompleteResult = autocompleteResults[indexPath.row]
+            print(currentAutocompleteResult.name)
+            loadDataInTable(lon: currentAutocompleteResult.stopArea.coord.lon, lat:currentAutocompleteResult.stopArea.coord.lat)
         }
     }
 }

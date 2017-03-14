@@ -28,8 +28,8 @@ public class StopSchedulesBuilder : BaseNavitiaResourceBuilder {
         return self
     }
 
-    public func build(callback: @escaping ([StopSchedulesResponse.StopSchedules]) -> (Void)) {
-        let url:String = "https://api.navitia.io/v1/coverage/\(self.coverage)/coords/2.377310;48.847002/stop_schedules?distance=\(self.distance!)&count=\(self.count!)"
+    public func build(lon:String, lat:String, callback: @escaping ([StopSchedulesResponse.StopSchedules]) -> (Void)) {
+        let url:String = "https://api.navitia.io/v1/coverage/\(self.coverage)/coords/\(lon);\(lat)/stop_schedules?distance=\(self.distance!)&count=\(self.count!)"
         print(url)
         let requestURL: NSURL = NSURL(string: url)!
         let urlRequest: NSMutableURLRequest = NSMutableURLRequest(url: requestURL as URL)
