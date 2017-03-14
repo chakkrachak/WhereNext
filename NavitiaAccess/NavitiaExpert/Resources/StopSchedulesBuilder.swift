@@ -8,7 +8,7 @@ import Foundation
 public class StopSchedulesBuilder : BaseNavitiaResourceBuilder {
     public var distance:Int?
     public var count:Int?
-    public var stopSchedules:[String]
+    public var stopSchedules:[StopSchedulesResponse.StopSchedules]
 
     override public init(token:String, coverage: String) {
         self.stopSchedules = []
@@ -28,7 +28,7 @@ public class StopSchedulesBuilder : BaseNavitiaResourceBuilder {
         return self
     }
 
-    public func build(callback: @escaping ([String]) -> (Void)) {
+    public func build(callback: @escaping ([StopSchedulesResponse.StopSchedules]) -> (Void)) {
         let url:String = "https://api.navitia.io/v1/coverage/\(self.coverage)/coords/2.377310;48.847002/stop_schedules?distance=\(self.distance!)&count=\(self.count!)"
         print(url)
         let requestURL: NSURL = NSURL(string: url)!
@@ -47,7 +47,7 @@ public class StopSchedulesBuilder : BaseNavitiaResourceBuilder {
 
                     let stopSchedulesObject = StopSchedulesResponse(json:json)
                     for stopSchedule in stopSchedulesObject!.stopSchedules {
-                        self.stopSchedules.append(stopSchedule.stopPoint.label)
+                        self.stopSchedules.append(stopSchedule)
                     }
                 } catch {
                     print("Error with Json: \(error)")

@@ -11,7 +11,7 @@ import Foundation
 public class AutocompleteBuilder : BaseNavitiaResourceBuilder {
     public var distance:Int?
     public var count:Int?
-    public var autocompleteResults:[String]
+    public var autocompleteResults:[AutoCompleteResponse.Places]
     
     override public init(token:String, coverage: String) {
         self.autocompleteResults = []
@@ -31,7 +31,7 @@ public class AutocompleteBuilder : BaseNavitiaResourceBuilder {
         return self
     }
     
-    public func build(query:String, callback: @escaping ([String]) -> (Void)) {
+    public func build(query:String, callback: @escaping ([AutoCompleteResponse.Places]) -> (Void)) {
         let url:String = "https://api.navitia.io/v1/coverage/\(self.coverage)/places?q=\(query)&type[]=stop_area&distance=\(self.distance!)&count=\(self.count!)"
         print(url)
         let requestURL: NSURL = NSURL(string: url.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!)!
@@ -51,7 +51,7 @@ public class AutocompleteBuilder : BaseNavitiaResourceBuilder {
                     let autocompleteResultsObject = AutoCompleteResponse(json:json)
                     if (autocompleteResultsObject != nil) {
                         for autocompleteResult in autocompleteResultsObject!.places {
-                            self.autocompleteResults.append(autocompleteResult.name)
+                            self.autocompleteResults.append(autocompleteResult)
                         }
                     }
                 } catch {

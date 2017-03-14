@@ -15,6 +15,14 @@ class StopPointViewCell: UITableViewCell {
     func updateWith(label:String) {
         self.label.text = label
     }
+
+    func updateWith(autocompleteResult:AutoCompleteResponse.Places) {
+        self.label.text = autocompleteResult.name
+    }
+
+    func updateWith(stopSchedule:StopSchedulesResponse.StopSchedules) {
+        self.label.text = stopSchedule.stopPoint.label
+    }
 }
 
 extension ViewController: UISearchResultsUpdating {
@@ -32,15 +40,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     let cellIdentifier = "StopPointCellIdentifier"
     let searchController = UISearchController(searchResultsController: nil)
 
-    var stopSchedules:[String] = ["TATA", "TOTO", "TUTU"]
-    var autocompleteResults:[String] = ["BLA", "BLA"]
+    var stopSchedules:[StopSchedulesResponse.StopSchedules] = []
+    var autocompleteResults:[AutoCompleteResponse.Places] = []
 
     func loadDataInTable() {
         StopSchedulesBuilder(token: self.token, coverage: self.coverage)
             .withDistance(1000)
             .withCount(30)
             .build(callback: {
-                (stopSchedules:[String]) -> Void in
+                (stopSchedules:[StopSchedulesResponse.StopSchedules]) -> Void in
                 self.stopSchedules = stopSchedules
 
                 self.tableView.reloadData()
@@ -53,7 +61,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     .withDistance(1000)
                     .withCount(30)
                     .build(query: searchText, callback: {
-                        (autocompleteResults: [String]) -> Void in
+                        (autocompleteResults: [AutoCompleteResponse.Places]) -> Void in
                         self.autocompleteResults = autocompleteResults
 
                         self.tableView.reloadData()
@@ -101,9 +109,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath as IndexPath) as! StopPointViewCell
 
         if isInAutocompletion() {
-            cell.updateWith(label:autocompleteResults[indexPath.row])
+            cell.updateWith(autocompleteResult: autocompleteResults[indexPath.row])
         } else {
-            cell.updateWith(label:stopSchedules[indexPath.row])
+            cell.updateWith(stopSchedule: stopSchedules[indexPath.row])
         }
 
         return cell
@@ -111,7 +119,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if isInAutocompletion() {
-            print(autocompleteResults[indexPath.row])
+            print(autocompleteResults[indexPath.row].name)
         }
     }
 }
