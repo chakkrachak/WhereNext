@@ -31,10 +31,10 @@ public class AutocompleteBuilder : BaseNavitiaResourceBuilder {
         return self
     }
     
-    public func build(callback: @escaping ([String]) -> (Void)) {
-        let url:String = "https://api.navitia.io/v1/coverage/\(self.coverage)/places?q=gare&type%5B%5D=stop_area&distance=\(self.distance!)&count=\(self.count!)"
+    public func build(query:String, callback: @escaping ([String]) -> (Void)) {
+        let url:String = "https://api.navitia.io/v1/coverage/\(self.coverage)/places?q=\(query)&type[]=stop_area&distance=\(self.distance!)&count=\(self.count!)"
         print(url)
-        let requestURL: NSURL = NSURL(string: url)!
+        let requestURL: NSURL = NSURL(string: url.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!)!
         let urlRequest: NSMutableURLRequest = NSMutableURLRequest(url: requestURL as URL)
         urlRequest.addValue(self.token, forHTTPHeaderField: "Authorization")
         let session = URLSession.shared
@@ -49,8 +49,10 @@ public class AutocompleteBuilder : BaseNavitiaResourceBuilder {
                     let json:[String:AnyObject] = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String:AnyObject]
                     
                     let autocompleteResultsObject = AutoCompleteResponse(json:json)
-                    for autocompleteResult in autocompleteResultsObject!.places {
-                        self.autocompleteResults.append(autocompleteResult.name)
+                    if (autocompleteResultsObject != nil) {
+                        for autocompleteResult in autocompleteResultsObject!.places {
+                            self.autocompleteResults.append(autocompleteResult.name)
+                        }
                     }
                 } catch {
                     print("Error with Json: \(error)")

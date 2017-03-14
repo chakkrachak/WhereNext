@@ -51,7 +51,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         AutocompleteBuilder(token: self.token, coverage: self.coverage)
                 .withDistance(1000)
                 .withCount(30)
-                .build(callback: {
+                .build(query: searchText, callback: {
                     (autocompleteResults:[String]) -> Void in
                     self.autocompleteResults = autocompleteResults
 
