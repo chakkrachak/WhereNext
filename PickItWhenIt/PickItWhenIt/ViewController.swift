@@ -11,7 +11,7 @@ import NavitiaAccess
 
 class StopPointViewCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
-    
+
     func updateWith(label:String) {
         self.label.text = label
     }
@@ -27,11 +27,11 @@ extension ViewController: UISearchResultsUpdating {
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     let token:String = "9e304161-bb97-4210-b13d-c71eaf58961c"
     let coverage:String = "fr-idf"
-    
+
     @IBOutlet weak var tableView: UITableView!
     let cellIdentifier = "StopPointCellIdentifier"
     let searchController = UISearchController(searchResultsController: nil)
-    
+
     var stopSchedules:[String] = ["TATA", "TOTO", "TUTU"]
     var autocompleteResults:[String] = ["BLA", "BLA"]
 
@@ -42,28 +42,34 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             .build(callback: {
                 (stopSchedules:[String]) -> Void in
                 self.stopSchedules = stopSchedules
-                
+
                 self.tableView.reloadData()
             })
     }
-    
-    func filterContentForSearchText(searchText: String, scope: String = "All") {
-        AutocompleteBuilder(token: self.token, coverage: self.coverage)
-                .withDistance(1000)
-                .withCount(30)
-                .build(query: searchText, callback: {
-                    (autocompleteResults:[String]) -> Void in
-                    self.autocompleteResults = autocompleteResults
 
-                    self.tableView.reloadData()
-                })
+    func filterContentForSearchText(searchText: String, scope: String = "All") {
+        if (searchText != "") {
+            AutocompleteBuilder(token: self.token, coverage: self.coverage)
+                    .withDistance(1000)
+                    .withCount(30)
+                    .build(query: searchText, callback: {
+                        (autocompleteResults: [String]) -> Void in
+                        self.autocompleteResults = autocompleteResults
+
+                        self.tableView.reloadData()
+                    })
+        } else {
+            self.autocompleteResults = []
+
+            self.tableView.reloadData()
+        }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // loadDataInTable()
-        
+
         self.searchController.searchResultsUpdater = self
         self.searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
@@ -75,28 +81,38 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Dispose of any resources that can be recreated.
     }
 
+    func isInAutocompletion() -> Bool {
+        return searchController.isActive && searchController.searchBar.text != ""
+    }
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (searchController.isActive && searchController.searchBar.text != "") {
+        if isInAutocompletion() {
             return autocompleteResults.count
         }
-        
+
         return stopSchedules.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath as IndexPath) as! StopPointViewCell
 
-        if (searchController.isActive && searchController.searchBar.text != "") {
+        if isInAutocompletion() {
             cell.updateWith(label:autocompleteResults[indexPath.row])
         } else {
             cell.updateWith(label:stopSchedules[indexPath.row])
         }
-        
+
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if isInAutocompletion() {
+            print(autocompleteResults[indexPath.row])
+        }
     }
 }
 
