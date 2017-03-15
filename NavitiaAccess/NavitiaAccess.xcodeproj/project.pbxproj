@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A1AAB1E519824162F13F554 /* BaseAccessComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA99917483F62EC1D65CA /* BaseAccessComponent.swift */; };
 		FE4CEEDF1E76D4E000B99CBC /* NavitiaAccess.h in Headers */ = {isa = PBXBuildFile; fileRef = FE4CEEDD1E76D4E000B99CBC /* NavitiaAccess.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE4CEEF41E76D8A600B99CBC /* SearchBarWithAutocomplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CEEF31E76D8A600B99CBC /* SearchBarWithAutocomplete.swift */; };
 		FED48DD21E7706B60066EF44 /* allModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED48DCE1E7706B60066EF44 /* allModels.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A1AA99917483F62EC1D65CA /* BaseAccessComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAccessComponent.swift; sourceTree = "<group>"; };
 		FE4CEEDA1E76D4E000B99CBC /* NavitiaAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NavitiaAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE4CEEDD1E76D4E000B99CBC /* NavitiaAccess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavitiaAccess.h; sourceTree = "<group>"; };
 		FE4CEEDE1E76D4E000B99CBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				FE4CEEF11E76D65B00B99CBC /* AutocompleteComponent */,
 				FE4CEEDD1E76D4E000B99CBC /* NavitiaAccess.h */,
 				FE4CEEDE1E76D4E000B99CBC /* Info.plist */,
+				5A1AA99917483F62EC1D65CA /* BaseAccessComponent.swift */,
 			);
 			path = NavitiaAccess;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				FED48DD21E7706B60066EF44 /* allModels.swift in Sources */,
 				FED48DD41E7706B60066EF44 /* StopSchedulesBuilder.swift in Sources */,
 				FE4CEEF41E76D8A600B99CBC /* SearchBarWithAutocomplete.swift in Sources */,
+				5A1AAB1E519824162F13F554 /* BaseAccessComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
