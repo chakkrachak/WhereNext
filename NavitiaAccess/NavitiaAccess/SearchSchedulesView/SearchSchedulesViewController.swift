@@ -22,7 +22,7 @@ public class SearchSchedulesViewController: UIViewController, UITableViewDelegat
         // Dispose of any resources that can be recreated.
     }
     
-    public func createView() -> UITableView {
+    public func launchView(into target: UIViewController) {
         var myTableView: UITableView!
 
         let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
@@ -34,7 +34,7 @@ public class SearchSchedulesViewController: UIViewController, UITableViewDelegat
         myTableView.dataSource = self
         myTableView.delegate = self
 
-        return myTableView
+        target.view.addSubview(myTableView)
     }
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -15,7 +15,7 @@ class AnotherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.addSubview(searchSchedulesViewController.createView())
+        searchSchedulesViewController.launchView(into: self)
     }
     
 
