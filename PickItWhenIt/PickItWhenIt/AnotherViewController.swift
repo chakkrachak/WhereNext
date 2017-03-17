@@ -17,6 +17,4 @@ class AnotherViewController: UIViewController {
 
         searchSchedulesViewController.launchView(into: self)
     }
-    
-
 }
