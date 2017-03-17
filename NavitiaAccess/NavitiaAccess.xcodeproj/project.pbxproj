@@ -10,6 +10,7 @@
 		5A1AAB1E519824162F13F554 /* BaseAccessComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1AA99917483F62EC1D65CA /* BaseAccessComponent.swift */; };
 		FE4CEEDF1E76D4E000B99CBC /* NavitiaAccess.h in Headers */ = {isa = PBXBuildFile; fileRef = FE4CEEDD1E76D4E000B99CBC /* NavitiaAccess.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE4CEEF41E76D8A600B99CBC /* SearchBarWithAutocomplete.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CEEF31E76D8A600B99CBC /* SearchBarWithAutocomplete.swift */; };
+		FE68BC591E7BEE5100D9F9A4 /* SearchSchedulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE68BC581E7BEE5100D9F9A4 /* SearchSchedulesViewController.swift */; };
 		FED48DD21E7706B60066EF44 /* allModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED48DCE1E7706B60066EF44 /* allModels.swift */; };
 		FED48DD31E7706B60066EF44 /* BaseNavitiaResourceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED48DD01E7706B60066EF44 /* BaseNavitiaResourceBuilder.swift */; };
 		FED48DD41E7706B60066EF44 /* StopSchedulesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED48DD11E7706B60066EF44 /* StopSchedulesBuilder.swift */; };
@@ -22,6 +23,7 @@
 		FE4CEEDD1E76D4E000B99CBC /* NavitiaAccess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavitiaAccess.h; sourceTree = "<group>"; };
 		FE4CEEDE1E76D4E000B99CBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE4CEEF31E76D8A600B99CBC /* SearchBarWithAutocomplete.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarWithAutocomplete.swift; sourceTree = "<group>"; };
+		FE68BC581E7BEE5100D9F9A4 /* SearchSchedulesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSchedulesViewController.swift; sourceTree = "<group>"; };
 		FED48DCE1E7706B60066EF44 /* allModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = allModels.swift; sourceTree = "<group>"; };
 		FED48DD01E7706B60066EF44 /* BaseNavitiaResourceBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavitiaResourceBuilder.swift; sourceTree = "<group>"; };
 		FED48DD11E7706B60066EF44 /* StopSchedulesBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopSchedulesBuilder.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 		FE4CEEDC1E76D4E000B99CBC /* NavitiaAccess */ = {
 			isa = PBXGroup;
 			children = (
+				FE68BC491E799C0800D9F9A4 /* SearchSchedulesView */,
 				FE4CEEF11E76D65B00B99CBC /* AutocompleteComponent */,
 				FE4CEEDD1E76D4E000B99CBC /* NavitiaAccess.h */,
 				FE4CEEDE1E76D4E000B99CBC /* Info.plist */,
@@ -73,6 +76,14 @@
 				FE4CEEF31E76D8A600B99CBC /* SearchBarWithAutocomplete.swift */,
 			);
 			path = AutocompleteComponent;
+			sourceTree = "<group>";
+		};
+		FE68BC491E799C0800D9F9A4 /* SearchSchedulesView */ = {
+			isa = PBXGroup;
+			children = (
+				FE68BC581E7BEE5100D9F9A4 /* SearchSchedulesViewController.swift */,
+			);
+			path = SearchSchedulesView;
 			sourceTree = "<group>";
 		};
 		FED48DCB1E7706B60066EF44 /* NavitiaExpert */ = {
@@ -194,6 +205,7 @@
 				FED48DD61E7709840066EF44 /* AutocompleteBuilder.swift in Sources */,
 				FED48DD31E7706B60066EF44 /* BaseNavitiaResourceBuilder.swift in Sources */,
 				FED48DD21E7706B60066EF44 /* allModels.swift in Sources */,
+				FE68BC591E7BEE5100D9F9A4 /* SearchSchedulesViewController.swift in Sources */,
 				FED48DD41E7706B60066EF44 /* StopSchedulesBuilder.swift in Sources */,
 				FE4CEEF41E76D8A600B99CBC /* SearchBarWithAutocomplete.swift in Sources */,
 				5A1AAB1E519824162F13F554 /* BaseAccessComponent.swift in Sources */,

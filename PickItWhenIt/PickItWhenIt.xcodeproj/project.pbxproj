@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FE4CEEEB1E76D57900B99CBC /* NavitiaAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4CEEEA1E76D55D00B99CBC /* NavitiaAccess.framework */; };
 		FE4CEEEC1E76D57900B99CBC /* NavitiaAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE4CEEEA1E76D55D00B99CBC /* NavitiaAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FE68BC571E7BED0C00D9F9A4 /* AnotherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE68BC561E7BED0C00D9F9A4 /* AnotherViewController.swift */; };
 		FEE3DDD21E71646C00B278F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE3DDD11E71646C00B278F4 /* AppDelegate.swift */; };
 		FEE3DDD41E71646C00B278F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE3DDD31E71646C00B278F4 /* ViewController.swift */; };
 		FEE3DDD71E71646C00B278F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE3DDD51E71646C00B278F4 /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		FE4CEEE51E76D55C00B99CBC /* NavitiaAccess.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NavitiaAccess.xcodeproj; path = ../NavitiaAccess/NavitiaAccess.xcodeproj; sourceTree = "<group>"; };
+		FE68BC561E7BED0C00D9F9A4 /* AnotherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnotherViewController.swift; sourceTree = "<group>"; };
 		FEE3DDCE1E71646C00B278F4 /* PickItWhenIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickItWhenIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE3DDD11E71646C00B278F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEE3DDD31E71646C00B278F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				FEE3DDD81E71646C00B278F4 /* Assets.xcassets */,
 				FEE3DDDA1E71646C00B278F4 /* LaunchScreen.storyboard */,
 				FEE3DDDD1E71646C00B278F4 /* Info.plist */,
+				FE68BC561E7BED0C00D9F9A4 /* AnotherViewController.swift */,
 			);
 			path = PickItWhenIt;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			files = (
 				FEE3DDD41E71646C00B278F4 /* ViewController.swift in Sources */,
 				FEE3DDD21E71646C00B278F4 /* AppDelegate.swift in Sources */,
+				FE68BC571E7BED0C00D9F9A4 /* AnotherViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
