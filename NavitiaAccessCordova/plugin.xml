@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-navitiaaccesssdk" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>NavitiaAccessCordova</name>
+    <js-module name="NavitiaAccessCordova" src="www/NavitiaAccessCordova.js">
+        <clobbers target="cordova.plugins.NavitiaAccessCordova" />
+    </js-module>
+
+    <platform name="ios">
+	  <config-file target="config.xml" parent="/*">
+	    <feature name="NavitiaAccessCordova">
+	      <param name="ios-package" value="NavitiaAccessCordova" />
+	    </feature>
+	  </config-file>
+
+      <header-file src="src/ios/NavitiaAccess/NavitiaAccess.h"/>
+      <header-file src="src/ios/NavitiaSDK-Bridging-Header.h"/>
+
+      <source-file src="src/ios/NavitiaAccessCordova.swift" />
+
+	  <source-file src="src/ios/NavitiaAccess/AutocompleteComponent/SearchBarWithAutocomplete.swift" />
+	  <source-file src="src/ios/NavitiaAccess/BaseAccessComponent.swift" />
+	  <source-file src="src/ios/NavitiaAccess/SearchSchedulesView/SearchSchedulesViewController.swift" />
+	  <source-file src="src/ios/NavitiaExpert/Models/Generated/allModels.swift" />
+	  <source-file src="src/ios/NavitiaExpert/Resources/AutocompleteBuilder.swift" />
+	  <source-file src="src/ios/NavitiaExpert/Resources/BaseNavitiaResourceBuilder.swift" />
+	  <source-file src="src/ios/NavitiaExpert/Resources/StopSchedulesBuilder.swift" />
+	 
+	  <dependency id="cordova-plugin-add-swift-support" />
+
+	</platform>
+
+</plugin>
