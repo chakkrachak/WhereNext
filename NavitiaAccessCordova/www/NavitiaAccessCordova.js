@@ -5,5 +5,5 @@ exports.echo = function(arg0, success, error) {
 };
 
 exports.SearchSchedulesViewController = function(success, error) {
-	exec(success, error, "NavitiaSDKCordovaPlugin", "SearchSchedulesViewControllerWrapper", [])
+	exec(success, error, 'NavitiaAccessCordova', 'SearchSchedulesViewControllerWrapper', [])
 };
