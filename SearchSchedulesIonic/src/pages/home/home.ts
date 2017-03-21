@@ -18,5 +18,6 @@ export class HomePage {
   	cordova.plugins.NavitiaAccessCordova.echo("TATA", function(msg) {
 	  	alert(msg);
   	})
+  	cordova.plugins.NavitiaAccessCordova.SearchSchedulesViewController();
   }
 }

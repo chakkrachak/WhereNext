@@ -1,3 +1,6 @@
+import Foundation
+import UIKit
+
 @objc(NavitiaAccessCordova) class NavitiaAccessCordova : CDVPlugin {
     @objc(echo:)
     func echo(command: CDVInvokedUrlCommand) {
@@ -38,5 +41,27 @@
             pluginResult,
             callbackId: command.callbackId
         )
+    }
+    let searchSchedulesViewController = SearchSchedulesViewController()
+
+    @objc(SearchSchedulesViewControllerWrapper:)
+    func SearchSchedulesViewControllerWrapper(command: CDVInvokedUrlCommand) {
+        var storyBoard:UIStoryboard? = nil
+        storyBoard = UIStoryboard(name: "Main", bundle: nil)
+
+        if let sb = storyBoard {
+
+            // step 3. create new window
+            var window = UIWindow(frame: UIScreen.main.bounds)
+
+            // step 4. start view controller
+            window.rootViewController = sb.instantiateInitialViewController()! as UIViewController
+
+            // step 5. make key window & visible
+            window.makeKeyAndVisible()
+
+            searchSchedulesViewController.launchView(into: window.rootViewController!)
+
+        }
     }
 }
